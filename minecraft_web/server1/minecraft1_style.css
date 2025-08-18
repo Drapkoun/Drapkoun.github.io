@@ -1,0 +1,56 @@
+h1 {
+  text-align: center;
+  margin-top: 0;
+  font-size: clamp(2rem, 6vw, 15vh);
+  padding-top: 5%;
+  font-family: 'Minecraft';
+}
+
+body {
+  position: relative;
+  min-height: 100vh;
+  margin: 0;
+  max-height: 100vh;
+  font-family:  Arial;
+}
+
+.background-images {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: -1;
+  pointer-events: none;
+  margin-top: -5vh;
+}
+
+.bg-img {
+  display: block;
+  width: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.bg-img + .bg-img {
+  margin-top: 0px; 
+}
+
+#blok {
+  position: relative;
+  z-index: 1;
+  background-color: rgba(187, 187, 187, 0.644); /* semi-transparent gray */
+  width: 60vw;
+  max-width: 1000px;
+  margin: 0 auto;
+  margin-top: 5vh;
+  padding: 2em;
+  border-radius: 8px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.2);
+}
+
+@font-face {
+  font-family: 'Minecraft';
+  src: url('../fonts/MinecraftTen.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
