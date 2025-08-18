@@ -6,7 +6,7 @@ h1 {
 }
 
 a {
-  text-decoration: underline;
+  text-decoration: none;
   color: #000;
   text-align: center;
   /*font-size: 8vh;*/
@@ -52,13 +52,41 @@ body {
 }
 
 #project-link1 {
-  margin-top: 930px;
-  font-size: 6vh;
+  margin-top: 65%;
+  font-size: 3vw;
   margin-left: -10%;
 }
 
+
 #project-link2 {
-  margin-top: 900px;
-  font-size: 10vh;
+  margin-top: 59%;
+  font-size: 4.5vw;
   margin-left: 13%;
+}
+
+#firstLink {
+  color: #000;
+  text-shadow:
+    -1px -1px 0 #fff,
+     1px -1px 0 #fff,
+    -1px  1px 0 #fff,
+     1px  1px 0 #fff,
+    -1px  0px 0 #fff,
+     1px  0px 0 #fff,
+     0px -1px 0 #fff,
+     0px  1px 0 #fff;
+}
+
+#secondLink {
+  /*color: #ff80ff;*/
+  color: #47a847;
+  text-shadow:
+    -2px -2px 0 #000,
+     2px -2px 0 #000,
+    -2px  2px 0 #000,
+     2px  2px 0 #000,
+    -2px  0px 0 #000,
+     2px  0px 0 #000,
+     0px -2px 0 #000,
+     0px  2px 0 #000;
 }
