@@ -12,16 +12,20 @@
     <img src="../pictures/minecraft_background1.png" class="bg-img">
     <img src="../pictures/minecraft_background2.png" class="bg-img">
     <img src="../pictures/minecraft_background3.png" class="bg-img">
+    <img src="../pictures/minecraft_background4.png" class="bg-img">
   </div> 
+  <img src="../pictures/minecraft_background_stone.png" id="fixedBackground">
   <div id="blok">
       <h1>Unusual survival 1</h1>
-      <ul>
-        <li><a href="#about" target="_self">O serveru</a></li>
-        <li><a href="#rules" target="_self">Pravidla</a></li>
-        <li><a href="#content" target="_self">Bonus content</a></li>
-        <li><a href="#members" target="_self">Členové</a></li>
-        <li><a href="#buildings" target="_self">Stavby</a></li>
-      </ul>
+      <div id="theme-bar">
+        <ul>
+          <li><a href="#about">🏠O serveru</a></li>
+          <li><a href="#rules">📜Pravidla</a></li>
+          <li><a href="#content">⚙Bonus content</a></li>
+          <li><a href="#members">👥Členové</a></li>
+          <li><a href="#buildings">🏗️Stavby</a></li>
+        </ul>
+      </div>
 
       <h2 id="about">O serveru</h2>
       <h3>Úvod</h3>
@@ -29,7 +33,7 @@
         Unusual survival je minecraftový server, který jsem já a moji přátelé vytvořili v naší "minecraft phase". 
         Je to taková oslazená vanilla, myšleno tak, že jsou tu sice přidaný nějaký kontent, 
         ale overall je to furt jenom vanilla s nějakýma novýma strukturama a tak.
-        Když jsme server zakládali, nemohli jsme se dohotnout, jestli ho udělat spíše jako smp nebo klasický peaceful survival, tak jsme přisli se sytémem,
+        Když jsme server zakládali, nemohli jsme se dohodnout, jestli ho udělat spíše jako smp nebo klasický peaceful survival, tak jsme přisli se sytémem,
         ve kterém se každý hráč může rozhodnout jakým způsobem bude hrát. 
         Více podrobnějších informací se můžeš dozvědět na ostatních stránkách tohoto serveru, které popisují konkrétní témata.
       </p>
@@ -47,7 +51,7 @@
         <li>Na spawnu se nesmí zabíjet (ani hostile hráči)</li>
         <li>Jakékoli škody způsobeny na spawnu musíš opravit, pokud nemůžeš řekni to @Smertッ nebo @Drápkoun</li>
         <li>Spawn je určen k tomu, aby si tam každý hráč mohl postavit svůj obchod, předem se ale vždy domluvte s @Drápkoun.</li>
-        <li>Neničit ani nelootit (kromě chestek) vesnici na spawnu (prostě ji nechat zachovanou v původním stavu)</li>
+        <li>Neničit ani nelootit vesnici na spawnu (prostě ji nechat zachovanou v původním stavu)</li>
         <li>Po přečtení pravidel si MUSÍŠ vybrat roli</li>
       </ol>
       <h3>Peaceful:</h3>
@@ -114,7 +118,27 @@
       </ul>
 
       <h2 id="buildings">Stavby</h2>
-      <p>Zde zatím nic není XDD</p>
+      <p>Zatím tu nic není XDD</p>
   </div>
+  <script>
+
+      function isMobile() {
+      return window.matchMedia("(max-width: 600px)").matches;
+    }
+
+    window.addEventListener('scroll', function() {
+      if (isMobile()) {
+      document.getElementById('theme-bar').classList.remove('fixed');
+      return;
+      }
+      const bar = document.getElementById('theme-bar');
+      if (window.scrollY > 350) { 
+      bar.classList.add('fixed');
+      } else {
+      bar.classList.remove('fixed');
+      }
+    });
+
+  </script>
 </body>
 </html>
