@@ -1,0 +1,25 @@
+.background-images {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: -1;
+}
+
+.bg-img {
+  display: block;
+  width: 100%;
+  object-fit: cover;
+}
+
+.bg-img + .bg-img {
+  margin-top: 0px; 
+}
+
+#inventar {
+  width:60vw;
+  position:fixed;
+  bottom: 15px;
+  left: 20vw;
+  pointer-events: none;
+}

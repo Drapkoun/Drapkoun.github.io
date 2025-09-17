@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <title>Minecraft</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="stylGamesky.css">
+  <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline' 'unsafe-eval'">
+</head>
+<body>
+  
+  <div class="background-images">
+    <img src="pictures/pic1.png" class="bg-img" draggable="false" usemap="#pic1">
+    <img src="pictures/pic2.png" class="bg-img" draggable="false" usemap="#pic2">
+    <img src="pictures/pic3.png" class="bg-img" draggable="false" usemap="#pic3">
+    <img src="pictures/pic4.png" class="bg-img" draggable="false" usemap="#pic4">
+    <img src="pictures/pic5.png" class="bg-img" draggable="false" usemap="#pic5">
+    <img src="pictures/pic6.png" class="bg-img" draggable="false" usemap="#pic6">
+  </div>
+  
+  <img src="pictures/inventory.png" id="inventar">
+
+  <!-- MAPY -->
+   <map name="pic1">
+    <area id="crafting" coords="678,777,700,753,724,755,722,848,673,845,676,809,676,794" shape="poly" onclick="console.log('Ahoj')">
+    <area id="sekera" coords="1573,745,1544,714,1508,751,1545,799,1573,809,1574,773" shape="poly" onclick="alert('Sekera')">
+    <area id="chesta" coords="1374,785,1432,785,1462,812,1466,875,1401,870,1401,809" shape="poly" onclick="funkce(3)">
+  </map>
+
+  <!-- Scripty -->
+  <script>
+
+    function funkce(x)
+    {
+      switch(x)
+      {
+        case 1: alert('Crafting table'); break;
+        case 2: alert('Sekera'); break;
+        case 3: alert('Našel jsi 💎💎💎!'); break;
+      }
+    }
+
+    document.addEventListener("DOMContentLoaded", function() {
+      document.getElementById("crafting").addEventListener("click",()=>funkce(1));
+      document.getElementById("sekera").addEventListener("click",()=>funkce(2));
+      document.getElementById("chesta").addEventListener("click",()=>funkce(3));
+    });
+  </script> 
+</body>
+</html>
