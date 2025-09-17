@@ -51,6 +51,17 @@ body {
   font-style: normal;
 }
 
+#fixedBackground {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  z-index: -10;
+  pointer-events: none;
+}
+
 #project-link1 {
   margin-top: 65%;
   font-size: 3vw;
@@ -80,6 +91,25 @@ body {
 #secondLink {
   /*color: #ff80ff;*/
   color: #47a847;
+  text-shadow:
+    -2px -2px 0 #000,
+     2px -2px 0 #000,
+    -2px  2px 0 #000,
+     2px  2px 0 #000,
+    -2px  0px 0 #000,
+     2px  0px 0 #000,
+     0px -2px 0 #000,
+     0px  2px 0 #000;
+}
+
+#project-link3 {
+  margin-top: 50%;
+  font-size: 5.5vw;
+  margin-left: 0%;
+}
+
+#thirdLink {
+  color: #eb4ad5;
   text-shadow:
     -2px -2px 0 #000,
      2px -2px 0 #000,

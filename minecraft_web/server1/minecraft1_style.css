@@ -99,7 +99,7 @@ body {
   background: rgba(110, 110, 110, 0.644);
 }
 
-#theme-bar.fixed {
+#Vertical-theme-bar {
   position: fixed;
   top: 15vh;
   left: 1vw;
@@ -111,14 +111,31 @@ body {
   padding: 1em 0em 0em 0em;
 }
 
-#theme-bar.fixed ul {
+#Vertical-theme-bar ul {
   flex-direction: column;
   align-items: flex-start;
+  list-style: none;
+  text-align: center;
+  width: 100%;
+  margin: 0;
+  padding: 0;
 }
 
-#theme-bar.fixed a {
+#Vertical-theme-bar li {
+  display: inline;
+}
+
+#Vertical-theme-bar a {
   width: 5vw;
   margin-bottom: 1em;
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  padding: 10px ;
+  border: 1px solid rgb(0, 0, 0);
+  border-radius: 4px;
+  display: inline-block;
+  margin-bottom: 10px;
+  margin-right: 4px;
 }
 
 
@@ -126,4 +143,17 @@ body {
   #theme-bar a {
     max-width: 38px;
   }
+}
+
+#backButton{
+  position: absolute;
+  top:-3vh;
+  left: 3vw;
+  font-family: 'Minecraft';
+  font-size: clamp(0.8rem, 2.5vw, 6vh);
+}
+
+#backButton a {
+  color: rgb(0, 0, 0);
+  text-decoration: none;
 }

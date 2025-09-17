@@ -14,10 +14,21 @@
     <img src="../pictures/minecraft_background3.png" class="bg-img">
     <img src="../pictures/minecraft_background4.png" class="bg-img">
   </div> 
+  <span id="backButton"><a href="../minecraft_homepage.html">Projekty</a></span>
   <img src="../pictures/minecraft_background_stone.png" id="fixedBackground">
   <div id="blok">
       <h1>Unusual survival 1</h1>
       <div id="theme-bar">
+        <ul>
+          <li><a href="#about">🏠O serveru</a></li>
+          <li><a href="#rules">📜Pravidla</a></li>
+          <li><a href="#content">⚙Bonus content</a></li>
+          <li><a href="#members">👥Členové</a></li>
+          <li><a href="#buildings">🏗️Stavby</a></li>
+        </ul>
+      </div>
+
+      <div id="Vertical-theme-bar">
         <ul>
           <li><a href="#about">🏠O serveru</a></li>
           <li><a href="#rules">📜Pravidla</a></li>
@@ -128,14 +139,14 @@
 
     window.addEventListener('scroll', function() {
       if (isMobile()) {
-      document.getElementById('theme-bar').classList.remove('fixed');
+      document.getElementById('Vertical-theme-bar').style.display = 'none';
       return;
       }
-      const bar = document.getElementById('theme-bar');
+      const bar = document.getElementById('Vertical-theme-bar');
       if (window.scrollY > 350) { 
-      bar.classList.add('fixed');
+      bar.style.display = 'block';
       } else {
-      bar.classList.remove('fixed');
+      bar.style.display = 'none';
       }
     });
 
