@@ -5,46 +5,104 @@
   <title>Minecraft</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="stylGamesky.css">
+  <link rel="JavaScript" href="Scripty.js">
   <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline' 'unsafe-eval'">
 </head>
 <body>
   
   <div class="background-images">
-    <img src="pictures/pic1.png" class="bg-img" draggable="false" usemap="#pic1">
-    <img src="pictures/pic2.png" class="bg-img" draggable="false" usemap="#pic2">
-    <img src="pictures/pic3.png" class="bg-img" draggable="false" usemap="#pic3">
-    <img src="pictures/pic4.png" class="bg-img" draggable="false" usemap="#pic4">
-    <img src="pictures/pic5.png" class="bg-img" draggable="false" usemap="#pic5">
-    <img src="pictures/pic6.png" class="bg-img" draggable="false" usemap="#pic6">
+    <img src="pictures/pic1.png" class="bg-img" draggable="false" >
+    <img src="pictures/pic2.png" class="bg-img" draggable="false" >
+    <img src="pictures/pic3.png" class="bg-img" draggable="false" >
+    <img src="pictures/pic4.png" class="bg-img" draggable="false" >
+    <img src="pictures/pic5.png" class="bg-img" draggable="false" >
+    <img src="pictures/pic6.png" class="bg-img" draggable="false" >
   </div>
+
+  <!-- Inventory -->
+  <img src="pictures/inventory.png" id="inventar" draggable="false">
+  <!--Crafting Table-->
+  <img src="pictures/utilities/CraftingUI.png" id="craftingUI" class="craftingUI" draggable="false">
+  <img src="" id="recipe" class="clickable craftingUI" draggable="false">
+
   
-  <img src="pictures/inventory.png" id="inventar">
+  <!-- Inventory items -->
+  <div>
+    <img src="" draggable="false" id="item1" class="inventory-item" onclick="itemInHand(1)">
+    <img src="" draggable="false" id="item2" class="inventory-item" onclick="itemInHand(2)">
+    <img src="" draggable="false" id="item3" class="inventory-item" onclick="itemInHand(3)">
+    <img src="" draggable="false" id="item4" class="inventory-item" onclick="itemInHand(4)">
+    <img src="" draggable="false" id="item5" class="inventory-item" onclick="itemInHand(5)">
+    <img src="" draggable="false" id="item6" class="inventory-item" onclick="itemInHand(6)">
+    <img src="" draggable="false" id="item7" class="inventory-item" onclick="itemInHand(7)">
+    <img src="" draggable="false" id="item8" class="inventory-item" onclick="itemInHand(8)">
+    <img src="" draggable="false" id="item9" class="inventory-item" onclick="itemInHand(9)">
+    <img src="" draggable="false" id="item10" class="inventory-item" onclick="itemInHand(10)">
+    <img src="" draggable="false" id="item11" class="inventory-item" onclick="itemInHand(11)">
+    <img src="" draggable="false" id="item12" class="inventory-item" onclick="itemInHand(12)">
+    <img src="pictures/utilities/TrashCan.png" id="trashCan" class="inventory-item" draggable="false">
+  </div>
 
-  <!-- MAPY -->
-   <map name="pic1">
-    <area id="crafting" coords="678,777,700,753,724,755,722,848,673,845,676,809,676,794" shape="poly" onclick="console.log('Ahoj')">
-    <area id="sekera" coords="1573,745,1544,714,1508,751,1545,799,1573,809,1574,773" shape="poly" onclick="alert('Sekera')">
-    <area id="chesta" coords="1374,785,1432,785,1462,812,1466,875,1401,870,1401,809" shape="poly" onclick="funkce(3)">
-  </map>
+  <!--  Clickables  -->
+  <!--Crafting-->
+  <svg viewBox="0 0 1000 500" width="100%" length="auto" id="craftingUImap" class="craftingUI">
+    <polygon id="craftingUIClose" class="clickable"
+            points="801,12,863,13,863,74,803,75"/>
 
-  <!-- Scripty -->
-  <script>
+    <polygon id="IronSwordRecipe" class="clickable"
+            points="188,82,208,78,240,82,237,120,210,128,185,125"/>
 
-    function funkce(x)
-    {
-      switch(x)
-      {
-        case 1: alert('Crafting table'); break;
-        case 2: alert('Sekera'); break;
-        case 3: alert('Našel jsi 💎💎💎!'); break;
-      }
-    }
+    <polygon id="DiamondSwordRecipe" class="clickable"
+            points="186,153,210,149,238,150,240,195,215,192,185,195"/>
 
-    document.addEventListener("DOMContentLoaded", function() {
-      document.getElementById("crafting").addEventListener("click",()=>funkce(1));
-      document.getElementById("sekera").addEventListener("click",()=>funkce(2));
-      document.getElementById("chesta").addEventListener("click",()=>funkce(3));
-    });
-  </script> 
+    <polygon id="Craft" class="clickable"
+            points="706,169,768,169,770,232,708,231"/>
+  </svg>
+  <!-- pic1-->
+  <svg viewBox="0 0 1920 1080" width="100%" length="auto" id="map">
+
+    <polygon class="crafting clickable"
+            points="678,777 700,753 724,755 722,848 673,845 676,809 676,794"/>
+
+    <polygon id="sekera" class="clickable"
+            points="1573,745 1544,714 1508,751 1545,799 1573,809 1574,773"
+             />
+
+    <polygon id="chesta" class="clickable"
+            points="1374,785 1432,785 1462,812 1466,875 1401,870 1401,809" />
+
+    <polygon id="Strom" class="clickable"
+            points="26,704,111,699,203,695,203,900,109,944,26,944" />
+  </svg>
+
+  <!-- pic2 -->
+   <svg viewBox="0 0 1920 606" width="100%" length="auto" id="map">
+    </svg>
+   
+  <!-- pic3 -->
+   <svg viewBox="0 0 1920 770" width="100%" length="auto" id="map">
+
+      <polygon id="Krump" class="clickable"
+            points="1340,151,1351,219,1325,200,1305,209,1288,233,1264,241,1273,217,1300,178,1278,153" />
+
+      <polygon id="IronOre" class="clickable"
+            points="1366,141,1422,126,1544,131,1549,252,1426,247,1366,244" />
+
+      <polygon id="Chest2" class="clickable"
+            points="740,348,934,344,935,446,735,446" />
+
+      <polygon id="Furnace" class="clickable"
+            points="940,341,1042,338,1046,449,942,455" />
+
+      <polygon class="crafting clickable"
+            points="1042,329,1124,328,1156,355,1151,457,1046,457" />
+
+  </svg>
+
+  
+  <script src="Scripty.js"></script>
+
 </body>
 </html>
+
+
