@@ -3,7 +3,8 @@
   top: 0;
   left: 0;
   width: 100%;
-  z-index: -1;
+  z-index: -10;
+  user-select: none;
 }
 
 .bg-img {
@@ -19,7 +20,114 @@
 #inventar {
   width:60vw;
   position:fixed;
-  bottom: 15px;
+  bottom: 1.5vh;
   left: 20vw;
-  pointer-events: none;
+  opacity: 85%;
+  z-index: 0;
+  pointer-events: auto;
 }
+
+.inventory-item {
+  z-index: 1;
+  position: fixed;
+  cursor: pointer;
+  bottom: 2.8vh;
+  width: 3.7vw;
+  user-select: none;
+}
+
+#item1 {
+  left: 20.5vw;
+}
+
+#item2 {
+  left: 25.5vw;
+}
+
+#item3 {
+  left: 30.5vw;
+}
+
+#item4 {
+  left: 35.5vw;
+}
+
+#item5 {
+  left: 40.5vw;
+}
+
+#item6 {
+  left: 45.5vw;
+}
+
+#item7 {
+  left: 50.5vw;
+}
+
+#item8 {
+  left: 55.5vw;
+}
+
+#item9 {
+  left: 60.5vw;
+}
+
+#item10 {
+  left: 65.5vw;
+}
+
+#item11 {
+  left: 70.5vw;
+}
+
+#item12 {
+  left: 75.5vw;
+}
+
+#trashCan {
+  left: 80.5vw;
+}
+
+.clickable {
+  cursor: pointer;
+} 
+
+#map {
+  opacity: 0;
+  /*fill: rgba(0, 255, 0, 0.3);
+  stroke: lime;*/
+  stroke-width: 2;
+  z-index: -9;
+  max-width:100%;
+  display:block;
+}
+
+body {
+  margin: 0;
+}
+
+.inhand-border {
+  box-sizing: border-box;
+  border: 3px solid #a0a0a0; 
+  /*outline: 2px solid #333;   */
+  box-shadow:
+    0 0 0.5px 2px #9b9b9b;    
+  transition: box-shadow 0.2s, border 0.2s;
+}
+
+.craftingUI {
+  width: 60vw;
+  position: fixed;
+  bottom: 15vh;
+  left: 20vw;
+  z-index: 5;
+  pointer-events: none;
+  display: none;
+}
+
+#craftingUImap {
+  display: none;
+  opacity: 0;
+  pointer-events: all;
+}
+
