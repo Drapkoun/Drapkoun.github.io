@@ -2,9 +2,9 @@
     function debug()
     {
       
-      inventory[1]="IronSword";
+      /*inventory[1]="IronSword";
       document.getElementById("item1").src = "pictures/items/IronSword.webp";
-      itemInHand(1);
+      itemInHand(1);*/
     }
     document.addEventListener("DOMContentLoaded", debug);
     //konec debugu
