@@ -27,6 +27,16 @@
   pointer-events: auto;
 }
 
+#leftHandSlot {
+  width:5.3vw;
+  position:fixed;
+  bottom: 0.7vh;
+  left: 10vw;
+  opacity: 85%;
+  z-index: 0;
+  pointer-events: auto;
+}
+
 .inventory-item {
   z-index: 1;
   position: fixed;
@@ -34,6 +44,10 @@
   bottom: 2.8vh;
   width: 3.7vw;
   user-select: none;
+}
+
+#item0 {
+  left: 10.8vw;
 }
 
 #item1 {
@@ -93,10 +107,20 @@
 } 
 
 #map {
-  opacity: 0;
-  /*fill: rgba(0, 255, 0, 0.3);
-  stroke: lime;*/
+  /*opacity: 0;*/
+  fill: rgba(0, 255, 0, 0.3);
+  stroke: lime;
   stroke-width: 2;
+  z-index: -9;
+  max-width:100%;
+  display:block;
+}
+
+#monster {
+  /*stroke: rgb(255, 0, 0);
+  stroke-width: 2;*/
+  fill:rgba(0, 0, 0, 0);
+  stroke-width: 1;
   z-index: -9;
   max-width:100%;
   display:block;
@@ -115,6 +139,8 @@ body {
   transition: box-shadow 0.2s, border 0.2s;
 }
 
+/*Crafting*/
+
 .craftingUI {
   width: 60vw;
   position: fixed;
@@ -131,3 +157,69 @@ body {
   pointer-events: all;
 }
 
+/*Text*/
+#thanks {
+  position:absolute;
+  top:134vw;
+  left: 35vw;
+  width: 40vw;
+  text-align: center;
+  display: block;
+  font-family: 'Minecraft', Arial, sans-serif;
+  font-size: 1.4vw;
+  color: white;
+  text-shadow:
+    -2px -2px 0 #000,
+     2px -2px 0 #000,
+    -2px  2px 0 #000,
+     2px  2px 0 #000,
+    -2px  0px 0 #000,
+     2px  0px 0 #000,
+     0px -2px 0 #000,
+     0px  2px 0 #000;
+  display: none;
+}
+
+#deathMessage{
+  display: block;
+  position: fixed;
+  top:40%;
+  left:35%;
+  width:30vw;
+  height:8vw;
+  background-color: #c42e2e;
+  font-family: 'Minecraft', Arial, sans-serif;
+  font-size: 5vw;
+  text-align: center;
+  box-shadow:
+    0 0 30px 10px #000a,
+    0 8px 32px 0 #222,
+    0 0 0 8px #111 inset;
+  display: none;
+}
+
+#deathMessage>p{
+  margin: 0.7vw 0 0 0;
+}
+
+@font-face {
+  font-family: 'Minecraft';
+  src: url('../fonts/MinecraftTen.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/*Health*/
+#healthBar {
+  position: fixed;
+  bottom: 6vw;
+  left: 20vw;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.heart {
+  width: 2.3vw;
+  user-select: none;
+  display: inline-block;
+}
