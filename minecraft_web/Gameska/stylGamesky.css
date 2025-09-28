@@ -107,9 +107,9 @@
 } 
 
 #map {
-  /*opacity: 0;*/
-  fill: rgba(0, 255, 0, 0.3);
-  stroke: lime;
+  opacity: 0;
+  /*fill: rgba(0, 255, 0, 0.3);
+  stroke: lime;*/
   stroke-width: 2;
   z-index: -9;
   max-width:100%;
